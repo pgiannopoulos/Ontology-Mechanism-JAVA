@@ -1,0 +1,313 @@
+<?xml version="1.0"?>
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:plut="http://mydomain.org/plut#">
+
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Person"> 
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/> 
+</rdf:Description>
+
+
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Professor"> 
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/> 
+	<rdfs:subClassOf rdf:resource="http://mydomain.org/plut#Person"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Student"> 
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/> 
+	<rdfs:subClassOf rdf:resource="http://mydomain.org/plut#Person"/>
+</rdf:Description>
+
+
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Department"> 
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/> 
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Lesson"> 
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/> 
+</rdf:Description>
+
+
+<rdf:Property rdf:about="http://mydomain.org/plut#has_name">
+<rdfs:domain rdf:resource="http://mydomain.org/plut#Person"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#literal"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://mydomain.org/plut#has_phone">
+<rdfs:domain rdf:resource="http://mydomain.org/plut#Person"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#literal"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://mydomain.org/plut#has_age">
+<rdfs:domain rdf:resource="http://mydomain.org/plut#Person"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://mydomain.org/plut#member_of">
+<rdfs:domain rdf:resource="http://mydomain.org/plut#Person"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Department"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://mydomain.org/plut#teaches">
+<rdfs:domain rdf:resource="http://mydomain.org/plut#Professor"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Lesson"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://mydomain.org/plut#les_name">
+<rdfs:domain rdf:resource="http://mydomain.org/plut#Lesson"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#literal"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://mydomain.org/plut#taught_by">
+<rdfs:domain rdf:resource="http://mydomain.org/plut#Lesson"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Professor"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://mydomain.org/plut#dep_name">
+<rdfs:domain rdf:resource="http://mydomain.org/plut#Department"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#literal"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://mydomain.org/plut#dep_city">
+<rdfs:domain rdf:resource="http://mydomain.org/plut#Department"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#literal"/>
+</rdf:Property>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Department_of_Computer_Engineering_and_Informatics">
+<rdf:type rdf:resource="http://mydomain.org/plut#Department"/>
+	<plut:dep_city>Patras</plut:dep_city>
+	<plut:dep_name>Department of Computer Engineering and Informatics</plut:dep_name>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Department_of_Mathematics">
+<rdf:type rdf:resource="http://mydomain.org/plut#Department"/>
+	<plut:dep_city>Patras</plut:dep_city>
+	<plut:dep_name>Department of Mathematics</plut:dep_name>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Department_of_Physics">
+<rdf:type rdf:resource="http://mydomain.org/plut#Department"/>
+	<plut:dep_city>Athens</plut:dep_city>
+	<plut:dep_name>Department of Physics</plut:dep_name>
+</rdf:Description>
+
+
+
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Chris_Makris"> 
+	<rdf:type rdf:resource="http://mydomain.org/plut#Professor"/>
+	<plut:has_name>Chris Makris</plut:has_name>
+	<plut:has_phone>1234567</plut:has_phone>
+	<plut:has_age>40</plut:has_age>
+	<plut:teaches>Data_Structures</plut:teaches>
+	<plut:member_of rdf:resource="http://mydomain.org/plut#Department_of_Computer_Engineering_and_Informatics"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#John_Chatzilygeroudis"> 
+	<rdf:type rdf:resource="http://mydomain.org/plut#Professor"/>
+	<plut:has_name>John Chatzilygeroudis</plut:has_name>
+	<plut:has_phone>5569875</plut:has_phone>
+	<plut:has_age>24</plut:has_age>
+	<plut:teaches>Java</plut:teaches>
+	<plut:member_of rdf:resource="http://mydomain.org/plut#Department_of_Computer_Engineering_and_Informatics"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Kostas_Berberidis"> 
+	<rdf:type rdf:resource="http://mydomain.org/plut#Professor"/>
+	<plut:has_name>Kostas Berberidis</plut:has_name>
+	<plut:has_phone>2598687</plut:has_phone>
+	<plut:has_age>32</plut:has_age>
+	<plut:teaches>Probabilities</plut:teaches>
+	<plut:member_of rdf:resource="http://mydomain.org/plut#Department_of_Computer_Engineering_and_Informatics"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#John_Karagiannis"> 
+	<rdf:type rdf:resource="http://mydomain.org/plut#Professor"/>
+	<plut:has_name>John Karagiannis</plut:has_name>
+	<plut:has_phone>8697453</plut:has_phone>
+	<plut:has_age>43</plut:has_age>
+	<plut:teaches>Game_Theory</plut:teaches>
+	<plut:member_of rdf:resource="http://mydomain.org/plut#Department_of_Computer_Engineering_and_Informatics"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Panos_Giannopoulos"> 
+	<rdf:type rdf:resource="http://mydomain.org/plut#Professor"/>
+	<plut:has_name>Panos Giannopoulos</plut:has_name>
+	<plut:has_phone>6986985</plut:has_phone>
+	<plut:has_age>35</plut:has_age>
+	<plut:teaches>Algorithms</plut:teaches>
+	<plut:member_of rdf:resource="http://mydomain.org/plut#Department_of_Computer_Engineering_and_Informatics"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Alan_Walker"> 
+	<rdf:type rdf:resource="http://mydomain.org/plut#Professor"/>
+	<plut:has_name>Alan Walker</plut:has_name>
+	<plut:has_phone>5897485</plut:has_phone>
+	<plut:has_age>65</plut:has_age>
+	<plut:teaches>Artificial_Intelligence</plut:teaches>
+	<plut:member_of rdf:resource="http://mydomain.org/plut#Department_of_Computer_Engineering_and_Informatics"/>
+</rdf:Description>
+
+
+
+
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Nikos_Alpha"> 
+	<rdf:type rdf:resource="http://mydomain.org/plut#Student"/>
+	<plut:has_name>Nikos Alpha</plut:has_name>
+	<plut:has_phone>5693214</plut:has_phone>
+	<plut:has_age>20</plut:has_age>
+	<plut:member_of rdf:resource="http://mydomain.org/plut#Department_of_Computer_Engineering_and_Informatics"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Kostas_Beta"> 
+	<rdf:type rdf:resource="http://mydomain.org/plut#Student"/>
+	<plut:has_name>Kostas Beta</plut:has_name>
+	<plut:has_phone>5142365</plut:has_phone>
+	<plut:has_age>23</plut:has_age>
+	<plut:member_of rdf:resource="http://mydomain.org/plut#Department_of_Mathematics"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#George_Gamma"> 
+	<rdf:type rdf:resource="http://mydomain.org/plut#Student"/>
+	<plut:has_name>George Gamma</plut:has_name>
+	<plut:has_phone>2577687</plut:has_phone>
+	<plut:has_age>25</plut:has_age>
+	<plut:member_of rdf:resource="http://mydomain.org/plut#Department_of_Physics"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Antonis_Delta"> 
+	<rdf:type rdf:resource="http://mydomain.org/plut#Student"/>
+	<plut:has_name>Antonis Delta</plut:has_name>
+	<plut:has_phone>6666547</plut:has_phone>
+	<plut:has_age>19</plut:has_age>
+	<plut:member_of rdf:resource="http://mydomain.org/plut#Department_of_Computer_Engineering_and_Informatics"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#John_Epsilon"> 
+	<rdf:type rdf:resource="http://mydomain.org/plut#Student"/>
+	<plut:has_name>John Epsilon</plut:has_name>
+	<plut:has_phone>3212321</plut:has_phone>
+	<plut:has_age>24</plut:has_age>
+	<plut:member_of rdf:resource="http://mydomain.org/plut#Department_of_Physics"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Jerry_Zeta"> 
+	<rdf:type rdf:resource="http://mydomain.org/plut#Student"/>
+	<plut:has_name>Jerry Zeta</plut:has_name>
+	<plut:has_phone>1111236</plut:has_phone>
+	<plut:has_age>18</plut:has_age>
+	<plut:member_of rdf:resource="http://mydomain.org/plut#Department_of_Computer_Engineering_and_Informatics"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Laertis_Eta"> 
+	<rdf:type rdf:resource="http://mydomain.org/plut#Student"/>
+	<plut:has_name>Laertis Eta</plut:has_name>
+	<plut:has_phone>8529631</plut:has_phone>
+	<plut:has_age>22</plut:has_age>
+	<plut:member_of rdf:resource="http://mydomain.org/plut#Department_of_Mathematics"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Jason_Theta"> 
+	<rdf:type rdf:resource="http://mydomain.org/plut#Student"/>
+	<plut:has_name>Jason Theta</plut:has_name>
+	<plut:has_phone>5588996</plut:has_phone>
+	<plut:has_age>21</plut:has_age>
+	<plut:member_of rdf:resource="http://mydomain.org/plut#Department_of_Computer_Engineering_and_Informatics"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Andreas_Iota"> 
+	<rdf:type rdf:resource="http://mydomain.org/plut#Student"/>
+	<plut:has_name>Andreas Iota</plut:has_name>
+	<plut:has_phone>7889456</plut:has_phone>
+	<plut:has_age>26</plut:has_age>
+	<plut:member_of rdf:resource="http://mydomain.org/plut#Department_of_Computer_Engineering_and_Informatics"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Thomas_Kapa"> 
+	<rdf:type rdf:resource="http://mydomain.org/plut#Student"/>
+	<plut:has_name>Thomas Kapa</plut:has_name>
+	<plut:has_phone>8522587</plut:has_phone>
+	<plut:has_age>29</plut:has_age>
+	<plut:member_of rdf:resource="http://mydomain.org/plut#Department_of_Physics"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Manos_Lambda"> 
+	<rdf:type rdf:resource="http://mydomain.org/plut#Student"/>
+	<plut:has_name>Manos Lambda</plut:has_name>
+	<plut:has_phone>1234596</plut:has_phone>
+	<plut:has_age>25</plut:has_age>
+	<plut:member_of rdf:resource="http://mydomain.org/plut#Department_of_Computer_Engineering_and_Informatics"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Tilemaxos_Mi"> 
+	<rdf:type rdf:resource="http://mydomain.org/plut#Student"/>
+	<plut:has_name>Tilemaxos Mi</plut:has_name>
+	<plut:has_phone>56898989</plut:has_phone>
+	<plut:has_age>28</plut:has_age>
+	<plut:member_of rdf:resource="http://mydomain.org/plut#Department_of_Computer_Engineering_and_Informatics"/>
+</rdf:Description>
+
+
+
+
+
+
+
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Game_Theory">
+	<rdf:type rdf:resource="http://mydomain.org/plut#Lesson"/>
+	<plut:les_name>Game Theory</plut:les_name>
+	<plut:taught_by rdf:resource="http://mydomain.org/plut#John_Karagiannis"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Artificial_Intelligence">
+	<plut:les_name>Artificial Intelligence</plut:les_name>
+	<plut:taught_by rdf:resource="http://mydomain.org/plut#Alan_Walker"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Probabilities">
+	<plut:les_name>Probabilities</plut:les_name>
+	<plut:taught_by rdf:resource="http://mydomain.org/plut#Kostas_Berberidis"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Algorithms">
+	<plut:les_name>Algorithms</plut:les_name>
+	<plut:taught_by rdf:resource="http://mydomain.org/plut#Panos_Giannopoulos"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Java">
+	<plut:les_name>Java</plut:les_name>
+	<plut:taught_by rdf:resource="http://mydomain.org/plut#John_Chatzilygeroudis"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://mydomain.org/plut#Data_Structures">
+	<plut:les_name>Data Structures</plut:les_name>
+	<plut:taught_by rdf:resource="http://mydomain.org/plut#Chris_Makris"/>
+</rdf:Description>
+
+</rdf:RDF>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+xmlns:plut="http://mydomain.org/plut#">
+
+<rdf:Description rdf:about="http://mydomain.org/plut# Pluto">
+<plut:discovered>
+<rdf:Description>
+	<plut:Discoverer rdf:resource="http://mydomain.org/plut# Clyde Tobo"/>
+	<plut:Date rdf:resource="http://mydomain.org/plut# 18/02/1930 "/>
+	<plut:Tool rdf:resource="http://mydomain.org/plut# Astrographer "/>
+</rdf:Description>
+</plut:discovered>
+</rdf:Description>
+
+</rdf:RDF>
